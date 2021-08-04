@@ -30,6 +30,6 @@ jobs:
         python corona-advanced.py
     - name: Push html files
       run: |
-        git add Corona-confirms.html Corona-deaths.html
+        git add -f Corona-confirms.html Corona-deaths.html
         git commit -f Corona-confirms.html Corona-deaths.html
         git push
