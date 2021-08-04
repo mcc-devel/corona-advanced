@@ -32,6 +32,6 @@ jobs:
         mv Corona-deaths.html docs/
     - name: Push html files
       run: |
-        git add -f Corona-confirms.html Corona-deaths.html
-        git commit -m "add htmls" Corona-confirms.html Corona-deaths.html
+        git add -f docs/Corona-confirms.html docs/Corona-deaths.html
+        git commit -m "add htmls" docs/Corona-confirms.html docs/Corona-deaths.html
         git push
