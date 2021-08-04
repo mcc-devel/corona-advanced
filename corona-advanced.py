@@ -41,7 +41,7 @@ conf = {}
 dates = []
 delta = timedelta(1)
 start = date(2020, 1, 22)
-end = date.today()
+end = date.today() - delta
 while start != end:
     dates.append(str(start.month) + '/' + str(start.day) + '/' + str(start.year % 100))
     start = start + delta
