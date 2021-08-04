@@ -28,8 +28,8 @@ jobs:
     - name: Run program
       run: |
         python corona-advanced.py
-        mv Corona-confirms.html docs
-        mv Corona-deaths.html docs
+        mv Corona-confirms.html docs/
+        mv Corona-deaths.html docs/
     - name: Push html files
       run: |
         git add -f Corona-confirms.html Corona-deaths.html
