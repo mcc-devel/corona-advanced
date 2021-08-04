@@ -7,7 +7,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-  - cron: "0 2 * * *"
+  - cron: "0 8 * * *"
 
 jobs:
   build:
@@ -30,6 +30,6 @@ jobs:
         python corona-advanced.py
     - name: Push html files
       run: |
-        git add -f Corona-confirms.html Corona-deaths.html
-        git commit -m "add htmls" docs/Corona-confirms.html docs/Corona-deaths.html
+        git add -f Corona-confirms.html Corona-deaths.html Corona-recoveries.html
+        git commit -m "Update htmls" Corona-confirms.html Corona-deaths.html Corona-recoveries.html
         git push
