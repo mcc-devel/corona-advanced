@@ -33,7 +33,7 @@ jobs:
     - name: Run program
       run: |
         python corona-advanced.py
-    - name: Push html files
+    - name: Push files
       run: |
         git add Corona-confirms.html Corona-deaths.html Corona-recoveries.html
         git commit -m "Update htmls" Corona-confirms.html Corona-deaths.html Corona-recoveries.html
