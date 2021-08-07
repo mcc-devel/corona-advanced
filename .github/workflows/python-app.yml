@@ -35,10 +35,6 @@ jobs:
         python corona-advanced.py
     - name: Push files
       run: |
-        git add Corona-confirms.html Corona-deaths.html Corona-recoveries.html
-        git commit -m "Update htmls" Corona-confirms.html Corona-deaths.html Corona-recoveries.html
-        git add confirm.csv death.csv recover.csv
-        git commit -m "Update csvs" confirm.csv death.csv recover.csv
-        git add confirm.json death.json recover.json
-        git commit -m "Update jsons" confirm.json death.json recover.json
+        git add Corona-confirms.html Corona-deaths.html Corona-recoveries.html confirm.csv death.csv recover.csv confirm.json death.json recover.json
+        git commit -m "Update files" Corona-confirms.html Corona-deaths.html Corona-recoveries.html confirm.csv death.csv recover.csv confirm.json death.json recover.json
         git push
