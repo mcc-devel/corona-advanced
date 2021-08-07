@@ -62,6 +62,8 @@ flag = False
 total = 0
 country = ''
 countries = []
+usflag = False
+allafter = 0
 for dat in dates:
     conf[dat] = {}
     dead[dat] = {}
@@ -174,6 +176,10 @@ for dat in dates:
         if elem['Province/State'] == 'Greenland':
             elem['Country/Region'] = 'Greenland'
             elem['Province/State'] = ''
+        if dat == '12/13/20' and elem['Country/Region'] == 'United states':
+            usflag = True
+        if usflag == True and elem['Country/Region'] == 'United states':
+            elem[dat] = elem['12/13/20']
         if elem['Country/Region'] not in countries:
             countries.append(elem['Country/Region'])
         if elem['Province/State'] == '':
