@@ -44,8 +44,10 @@ for row in rdr:
 
 json.dump(jsnc, fjsnc)
 json.dump(jsnd, fjsnd)
+json.dump(jsnr, fjsnr)
 fjsnc.close()
 fjsnd.close()
+fjsnr.close()
 print('Information is stored in json format if needed')
 dead = {}
 conf = {}
