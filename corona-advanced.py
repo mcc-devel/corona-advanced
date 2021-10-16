@@ -65,6 +65,7 @@ total = 0
 country = ''
 countries = []
 usflag = False
+othflag = False
 for dat in dates:
     conf[dat] = {}
     dead[dat] = {}
@@ -177,10 +178,14 @@ for dat in dates:
         if elem['Province/State'] == 'Greenland':
             elem['Country/Region'] = 'Greenland'
             elem['Province/State'] = ''
-        if dat == '12/13/20' and elem['Country/Region'] == 'United States':
+        if dat == '12/14/20' and elem['Country/Region'] == 'United States':
             usflag = True
+        elif dat == '8/5/21' and elem['Country/Region'] != 'United States':
+            othflag = True
         if usflag == True and elem['Country/Region'] == 'United States':
             elem[dat] = elem['12/13/20']
+        elif othflag == True and elem['Country/Region'] != 'United States':
+            elem[dat] = elem['8/4/21']
         if elem['Country/Region'] not in countries:
             countries.append(elem['Country/Region'])
         if elem['Province/State'] == '':
